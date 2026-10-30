@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reharness"
+version = "0.1.0"
+description = "Recursive agent harness optimization framework (Harness2-style): a Propose-Probe-Compose contrastive loop that optimizes the agent execution harness (system prompt, guardrails, memory, skills, tool guidance, scripts, subagents, middleware) without touching model weights. Pure Python, zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "reharness contributors" }]
+keywords = ["agent", "harness", "harness-engineering", "prompt-optimization", "self-improvement", "contrastive-learning", "propose-probe-compose", "llm", "zero-dependency"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+reharness = "reharness.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["reharness*"]

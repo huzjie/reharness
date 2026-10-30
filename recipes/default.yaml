@@ -1,0 +1,11 @@
+# reharness 默认配方
+harness:
+  max_guardrails: 8
+  max_skills: 8
+compose:
+  top_k: 6
+optimizer:
+  rounds: 5
+  seed: 20261030
+probe:
+  n_tasks: 24

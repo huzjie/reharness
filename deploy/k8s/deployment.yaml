@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reharness
+  labels:
+    app: reharness
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reharness
+  template:
+    metadata:
+      labels:
+        app: reharness
+    spec:
+      containers:
+        - name: reharness
+          image: reharness:0.1.0
+          ports:
+            - containerPort: 8790
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8790
+            initialDelaySeconds: 3
+            periodSeconds: 5

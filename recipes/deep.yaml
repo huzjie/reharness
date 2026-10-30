@@ -1,0 +1,7 @@
+# 深度优化配方（更多证据）
+propose:
+  candidates: 8
+optimizer:
+  rounds: 8
+probe:
+  n_tasks: 48

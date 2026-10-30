@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "reharness.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "reharness.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "reharness.fullname" . }}
+    spec:
+      containers:
+        - name: reharness
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8790

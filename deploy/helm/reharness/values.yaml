@@ -1,0 +1,12 @@
+replicaCount: 2
+image:
+  repository: reharness
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi

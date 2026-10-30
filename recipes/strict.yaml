@@ -1,0 +1,5 @@
+# 严格安全配方（护栏优先）
+compose:
+  top_k: 8
+harness:
+  max_guardrails: 12

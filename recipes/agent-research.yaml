@@ -1,0 +1,3 @@
+# 研究 agent 预设（示例）
+harness:
+  system_prompt: "You are a research agent. Cite sources and be honest about uncertainty."

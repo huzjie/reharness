@@ -1,0 +1,3 @@
+# 客服 agent 预设（示例）
+harness:
+  system_prompt: "You are a support agent. Be concise and never fabricate policy."

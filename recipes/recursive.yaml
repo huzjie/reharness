@@ -1,0 +1,4 @@
+# 两级递归配方
+optimizer:
+  recursive: true
+  rounds: 5

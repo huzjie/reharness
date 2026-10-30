@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  reharness:
+    build: .
+    ports:
+      - "8790:8790"
+    command: serve --port 8790
+    restart: unless-stopped

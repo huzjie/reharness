@@ -1,0 +1,7 @@
+# 快速冒烟配方（更少候选与任务）
+propose:
+  candidates: 3
+optimizer:
+  rounds: 1
+probe:
+  n_tasks: 12
